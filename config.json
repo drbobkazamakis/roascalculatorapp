@@ -1,0 +1,29 @@
+{
+  "template": "A - Calculator",
+  "description": "Calculator-focused template with tool comparison",
+  "domains": [
+    {
+      "domain": "roascalculatorapp.com",
+      "siteName": "ROAS Calculator App",
+      "h1": "Free ROAS Calculator - Maximize Your Google Ads ROI",
+      "metaDescription": "Calculate your Google Ads ROAS instantly with our free calculator. Compare the best ROAS optimization tools for 2026."
+    },
+    {
+      "domain": "myroascalculator.com",
+      "siteName": "My ROAS Calculator",
+      "h1": "ROAS Calculator - Track Your Ad Performance",
+      "metaDescription": "Free ROAS calculator for Google Ads. Discover top tools to automate and optimize your return on ad spend."
+    },
+    {
+      "domain": "cpccalculatorhub.com",
+      "siteName": "CPC Calculator Hub",
+      "h1": "CPC & ROAS Calculator - PPC Tools Compared",
+      "metaDescription": "Calculate CPC, ROAS, and more. Find the best PPC optimization tools to reduce costs and increase returns."
+    }
+  ],
+  "customization": {
+    "primaryColor": "#10b981",
+    "secondaryColor": "#3b82f6",
+    "style": "Clean, minimal, tool-focused"
+  }
+}
