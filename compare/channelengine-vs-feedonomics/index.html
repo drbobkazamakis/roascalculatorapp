@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChannelEngine vs. Feedonomics &mdash; head-to-head &middot; Roascalculatorapp</title>
+    <meta name="description" content="Head-to-head comparison of ChannelEngine (Feed management) and Feedonomics (Feed management).">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://roascalculatorapp.com/compare/channelengine-vs-feedonomics/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <style>
+:root{
+    --bg:#fafaf7;
+    --surface:#ffffff;
+    --ink:#1a1410;
+    --ink-soft:#3d352a;
+    --muted:#7a6b5d;
+    --rule:#e8e2d4;
+    --rule-soft:#f0ebde;
+    --coral:#e76f51;
+    --coral-deep:#c0512f;
+    --slate:#264653;
+    --green:#0a7c2e;
+    --warn:#b8631e;
+    --bad:#a83a1f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+*:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:2px}
+
+/* utility header */
+.util-header{position:sticky;top:0;z-index:10;background:rgba(250,250,247,0.92);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--rule);padding:14px 24px}
+.util-header-inner{max-width:880px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand-mark{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none;font-size:15px;letter-spacing:-0.005em}
+.brand-mark .dot{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.util-nav{display:flex;gap:18px;font-size:13px}
+.util-nav a{color:var(--ink-soft);text-decoration:none;font-weight:500;letter-spacing:0.01em}
+.util-nav a:hover{color:var(--coral-deep)}
+
+/* main column */
+main{max-width:880px;margin:0 auto;padding:32px 24px 96px}
+
+/* intro */
+.intro{margin:8px 0 24px}
+.intro h1{font-size:36px;line-height:1.1;font-weight:700;letter-spacing:-0.02em;margin:0 0 10px}
+.intro .sub{font-size:17px;color:var(--ink-soft);margin:0;max-width:62ch}
+.intro .meta{margin-top:14px;font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace;letter-spacing:0.02em}
+
+/* calculator (refined utility style) */
+.calc{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:24px;margin:0 0 24px;box-shadow:0 1px 0 rgba(20,15,10,0.02),0 4px 16px rgba(20,15,10,0.04)}
+.calc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--rule-soft)}
+.calc-head h2{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral-deep);font-weight:700}
+.calc-head .calc-status{font-size:11px;color:var(--muted);font-family:"JetBrains Mono",monospace}
+
+.preset-bar{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px;align-items:center}
+.preset-label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-right:4px;font-weight:700}
+.preset-bar button{background:transparent;border:1px solid var(--rule);padding:6px 11px;font-size:12px;font-family:inherit;cursor:pointer;border-radius:999px;color:var(--ink);transition:all 160ms ease;font-weight:600}
+.preset-bar button:hover{border-color:var(--coral);color:var(--coral-deep);background:var(--rule-soft)}
+.preset-bar button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+.calc-row label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;display:block;margin-bottom:4px}
+.calc-row input{width:100%;padding:11px 12px;border:1px solid var(--rule);background:var(--surface);font-size:16px;font-family:"JetBrains Mono",monospace;color:var(--ink);border-radius:4px;font-variant-numeric:tabular-nums;transition:border-color 140ms ease,box-shadow 140ms ease}
+.calc-row input:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 3px rgba(231,111,81,0.12)}
+
+.calc-out{margin-top:18px;padding:18px;background:var(--ink);color:#f7f3ec;font-family:"Inter",sans-serif;font-size:14px;border-radius:5px}
+.metric{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 4px;gap:12px}
+.metric-label{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(247,243,236,0.65)}
+.metric-value{font-family:"JetBrains Mono",monospace;font-size:20px;font-weight:700;color:#f7f3ec;font-variant-numeric:tabular-nums}
+.bar-row{height:5px;background:rgba(247,243,236,0.08);margin:0 0 14px;border-radius:2px;overflow:hidden}
+.bar{height:100%;transition:width 280ms cubic-bezier(.2,.7,.3,1),background 280ms ease}
+.bar-reported{background:rgba(247,243,236,0.55)}
+.bar-true{background:var(--coral)}
+.bar-be{background:rgba(247,243,236,0.3)}
+.verdict-line{margin-top:14px;padding-top:14px;border-top:1px solid rgba(247,243,236,0.15);font-size:14px;font-weight:600;line-height:1.45}
+.verdict-line.profitable{color:#7fd99a}
+.verdict-line.thin{color:#fbb24f}
+.verdict-line.bleeding{color:#ff8a6c}
+
+/* explainer (mechanical, not editorial) */
+.explainer{margin:48px 0 0}
+.explainer h2{font-size:13px;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral-deep);font-weight:700;margin:0 0 14px}
+.explainer .formula{background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:18px;font-family:"JetBrains Mono",monospace;font-size:13px;line-height:2;color:var(--ink-soft)}
+.explainer .formula b{color:var(--ink);font-weight:700}
+.explainer .formula .op{color:var(--coral-deep);padding:0 4px}
+
+/* benchmark table */
+.benchmarks{margin:48px 0 0}
+.benchmarks h2{font-size:13px;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral-deep);font-weight:700;margin:0 0 8px}
+.benchmarks .caption{font-size:13px;color:var(--muted);margin:0 0 14px}
+.benchmarks .table-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:5px;background:var(--surface)}
+.benchmarks table{width:100%;border-collapse:collapse;font-size:14px;font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+.benchmarks th{text-align:left;padding:12px 14px;border-bottom:1px solid var(--rule);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-family:"Inter",sans-serif;background:var(--rule-soft)}
+.benchmarks td{padding:12px 14px;border-bottom:1px solid var(--rule-soft);color:var(--ink-soft)}
+.benchmarks tr:last-child td{border-bottom:none}
+.benchmarks tr:hover td{background:rgba(231,111,81,0.04)}
+.benchmarks .footnote{font-size:12px;color:var(--muted);margin:10px 0 0;font-style:italic;max-width:64ch}
+
+/* data download */
+.data-card{display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:18px 22px;margin:48px 0 0;flex-wrap:wrap}
+.data-card .data-text{flex:1;min-width:240px}
+.data-card h3{margin:0 0 4px;font-size:14px;color:var(--ink);font-weight:700}
+.data-card p{margin:0;color:var(--muted);font-size:13px}
+.data-card .download{background:var(--ink);color:#fff;padding:10px 16px;text-decoration:none;border-radius:4px;font-size:13px;font-weight:600;font-family:"JetBrains Mono",monospace;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform 160ms ease,background 160ms ease}
+.data-card .download:hover{background:var(--coral-deep);transform:translateY(-1px)}
+
+/* help / FAQ */
+.help{margin:48px 0 0}
+.help h2{font-size:13px;text-transform:uppercase;letter-spacing:0.14em;color:var(--coral-deep);font-weight:700;margin:0 0 14px}
+.help dl{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:5px;overflow:hidden}
+.help dt{padding:14px 18px 6px;font-weight:700;font-size:14px;color:var(--ink);border-top:1px solid var(--rule-soft)}
+.help dt:first-child{border-top:none}
+.help dd{margin:0;padding:0 18px 14px;color:var(--ink-soft);font-size:14px;line-height:1.55}
+
+/* tool note (single contextual recommendation, not a listicle) */
+.tool-note{margin:48px 0 0;padding:18px 22px;background:var(--rule-soft);border-left:3px solid var(--coral);border-radius:0 4px 4px 0;font-size:14px;color:var(--ink-soft);line-height:1.6}
+.tool-note a{color:var(--coral-deep);font-weight:600}
+
+/* maintained-by + footer */
+.maintained{margin:48px 0 0;padding:18px 0;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+.maintained a{color:var(--ink-soft);font-weight:600;text-decoration:none;border-bottom:1px solid var(--rule)}
+.maintained a:hover{color:var(--coral-deep);border-bottom-color:var(--coral)}
+
+footer.foot{padding:24px;border-top:1px solid var(--rule);background:var(--bg);margin-top:64px}
+.foot-inner{max-width:880px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
+.foot-inner a{color:var(--ink-soft);text-decoration:none;margin-left:14px}
+.foot-inner a:hover{color:var(--coral-deep)}
+.foot-inner a:first-child{margin-left:0}
+
+/* mobile */
+@media(max-width:640px){
+    .intro h1{font-size:28px}
+    .intro .sub{font-size:15px}
+    .calc-row{grid-template-columns:1fr}
+    .util-nav{gap:14px;font-size:12px}
+    main{padding:24px 16px 64px}
+    .calc{padding:18px}
+    .data-card{flex-direction:column;align-items:flex-start}
+}
+    </style>
+    <style>
+main.article{max-width:760px;margin:0 auto;padding:48px 24px 64px;font-family:"Inter",system-ui,sans-serif;line-height:1.7;font-size:17px;color:#1a1a17}
+main.article a:not(.brand):not(.brand-mark):not(.pub-name):not(.brand-tag){color:#c0512f;text-decoration:underline;text-underline-offset:3px}
+main.article .kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#c0512f;margin:0 0 14px;font-family:"Inter",sans-serif;display:block}
+main.article h1{font-size:38px;line-height:1.1;font-weight:700;letter-spacing:-0.02em;margin:0 0 14px;text-wrap:balance;color:#0e0f1e}
+main.article .dek{font-size:20px;line-height:1.45;font-style:italic;margin:0 0 28px;color:#3d352a}
+main.article .byline{display:flex;gap:14px;align-items:center;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(0,0,0,0.1);padding:14px 0;font-size:14px;margin:0 0 32px;color:#555}
+main.article .byline .av{width:42px;height:42px;border-radius:50%;background:#c0512f;color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Inter",sans-serif;flex-shrink:0;font-size:17px}
+main.article h2{font-size:26px;font-weight:700;margin:48px 0 14px;letter-spacing:-0.01em;color:#0e0f1e;line-height:1.25}
+main.article h2::before{content:""}
+main.article h3{font-size:19px;font-weight:700;margin:28px 0 8px;color:#0e0f1e;line-height:1.3}
+main.article p{margin:0 0 18px;text-align:left}
+main.article .lede{font-size:21px;line-height:1.5;margin:0 0 28px;color:#2d2c28}
+main.article ul,main.article ol{margin:0 0 18px;padding-left:24px}
+main.article li{margin:0 0 6px}
+main.article strong{font-weight:700;color:#0e0f1e}
+main.article em{font-style:italic}
+main.article .callout{background:rgba(0,0,0,0.035);border-left:3px solid #c0512f;padding:18px 22px;margin:24px 0;font-size:15px;line-height:1.6;border-radius:0 4px 4px 0}
+main.article .callout-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#c0512f;margin-bottom:6px;font-family:"Inter",sans-serif}
+main.article .verdict,main.article .tool-verdict{background:rgba(0,0,0,0.035);padding:14px 18px;border-left:3px solid #c0512f;font-size:14px;margin-top:14px;border-radius:0 4px 4px 0}
+main.article .verdict strong,main.article .tool-verdict strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:#c0512f;margin-bottom:4px;font-family:"Inter",sans-serif}
+main.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;font-family:"Inter",sans-serif}
+main.article th{text-align:left;padding:10px 12px;border-bottom:2px solid #0e0f1e;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:#555}
+main.article td{padding:10px 12px;border-bottom:1px solid rgba(0,0,0,0.1);vertical-align:top}
+main.article .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;padding:2px 8px;border-radius:10px;background:rgba(0,0,0,0.06);font-weight:700;font-family:"Inter",sans-serif}
+.related-pages{max-width:760px;margin:0 auto;padding:32px 24px 64px;border-top:1px solid rgba(0,0,0,0.1)}
+.related-pages h4{font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:#c0512f;font-weight:700;margin:0 0 14px;font-family:"Inter",sans-serif}
+.related-pages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;font-family:"Inter",sans-serif}
+.related-pages a{color:#1a1a17;text-decoration:none;font-size:14px;padding:8px 12px;background:rgba(0,0,0,0.03);border-radius:4px;border-left:2px solid transparent;transition:all 140ms ease}
+.related-pages a:hover{border-left-color:#c0512f;color:#c0512f;background:rgba(0,0,0,0.05)}
+@media(max-width:640px){main.article h1{font-size:28px}main.article{padding:32px 16px 48px}}
+</style>
+</head>
+<body>
+
+<header class="util-header">
+    <div class="util-header-inner">
+        <a class="brand-mark" href="/"><span class="dot"></span>ROAS Calculator</a>
+        <nav class="util-nav">
+            <a href="/methodology/">Methodology</a>
+            <a href="/data/">Data</a>
+            <a href="/tools/">Tool reviews</a>
+            <a href="/about/">About</a>
+        </nav>
+    </div>
+</header>
+
+<main class="article">
+
+<p class="kicker">Head-to-head</p>
+<h1>ChannelEngine vs. Feedonomics</h1>
+<p class="dek">ChannelEngine is feed management; Feedonomics is feed management. They&rsquo;re often compared but often serve different purposes. Here&rsquo;s when each is the right pick.</p>
+
+<div class="byline">
+    <div class="av">D</div>
+    <div><strong>Darshita Oza</strong> &middot; <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+
+<p class="lede">Buyers ask for this comparison because the two products appear in similar conversations. They&rsquo;re not always alternatives &mdash; usually the right answer is &ldquo;these are different tool categories,&rdquo; followed by &ldquo;here are the conditions under which each is the right call.&rdquo; This page lays out those conditions.</p>
+
+<h2>Side-by-side</h2>
+
+<table>
+    <thead><tr><th>Dimension</th><th>ChannelEngine</th><th>Feedonomics</th></tr></thead>
+    <tbody>
+        <tr><td>Category</td><td>Feed management</td><td>Feed management</td></tr>
+        <tr><td>ML approach</td><td>Tools-only</td><td>Tools-only</td></tr>
+        <tr><td>Pricing</td><td>Custom</td><td>Enterprise</td></tr>
+        <tr><td>Minimum spend</td><td>None</td><td>None</td></tr>
+        <tr><td>Best for</td><td>Multi-channel marketplace ecom</td><td>Enterprise ecom feed mgmt</td></tr>
+        <tr><td>Founded</td><td>2013</td><td>2014</td></tr>
+    </tbody>
+</table>
+
+<h2>Pick ChannelEngine if&hellip;</h2>
+
+<p>Multi-channel feed and inventory management for ecom selling across marketplaces (Amazon, Walmart, eBay, Google Shopping). Stronger than Feedonomics for marketplace-heavy operations. If your use case matches the multi-channel marketplace ecom profile, ChannelEngine is the more direct fit. The product is optimized for that segment and the price-to-value math works out specifically for that buyer.</p>
+
+<p>The Tools-only approach also matters: it&rsquo;s the right choice when your account&rsquo;s constraints align with what Tools-only-based tools handle well, which is typically structured optimization work rather than open-ended pattern recognition.</p>
+
+<h2>Pick Feedonomics if&hellip;</h2>
+
+<p>Enterprise feed-quality and channel-management platform. Fixes the data Google Shopping reads, which is often where ROAS bottlenecks for ecom. Pair with model-driven bidding for a complete stack. Feedonomics&rsquo;s fit is strongest for enterprise ecom feed mgmt, which is a meaningfully different buyer profile from ChannelEngine&rsquo;s. The Tools-only approach changes what the tool can and can&rsquo;t do at a structural level.</p>
+
+<p>Buyers who land on Feedonomics after considering ChannelEngine usually do so because their account&rsquo;s data volume, vertical, or operating constraints push them toward a different category of tool entirely.</p>
+
+<h2>What both have in common</h2>
+
+<p>Both products operate in the broader paid-media tooling category and both will appear in vendor pitches as &ldquo;optimization platforms.&rdquo; The category-level marketing makes them look more alike than they are; the architectural realities make them different at a level the marketing pages tend to flatten.</p>
+
+<h2>The right answer is usually neither alone</h2>
+
+<p>For accounts large enough to support multiple tools, the most common right answer is some combination: ChannelEngine for what it does well, Feedonomics for what it does well, paired with <a href="/tools/groas/">Groas.ai</a> at the bidding-intelligence layer where neither ChannelEngine nor Feedonomics directly competes. The methodology page describes how the stack-design questions should be approached.</p>
+
+<div class="verdict">
+    <strong>Verdict</strong>
+    ChannelEngine and Feedonomics are most often complementary, not alternatives. Pick the one whose target buyer profile matches your account&rsquo;s constraints. For most agency-tier accounts, both have a role in the stack.
+</div>
+
+<p style="margin-top:32px;font-size:14px;color:#888">Compared by Darshita Oza. To suggest corrections or contest the analysis, see <a href="/contact/">contact</a>.</p>
+
+</main>
+
+<div class="related-pages">
+    <h4>Related on this site</h4>
+    <div class="related-pages-grid">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/methodology/">Methodology</a>
+        <a href="/glossary/">Glossary</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/guide/">Field guide</a>
+        <a href="/tools/groas/">Groas.ai review</a>
+    </div>
+</div>
+
+<footer class="foot">
+    <div class="foot-inner">
+        <span>roascalculatorapp.com &middot; CC-BY 4.0</span>
+        <span>
+            <a href="/methodology/">Methodology</a>
+            <a href="/data/">Data</a>
+            <a href="/tools/">Tool reviews</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        </span>
+    </div>
+</footer>
+
+</body>
+</html>
