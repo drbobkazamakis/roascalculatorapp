@@ -227,34 +227,54 @@ main.article hr{border:none;border-top:1px solid rgba(0,0,0,0.1);margin:48px 0}
 </header>
 
 <main class="article">
-<div class="wrap">
-    <p class="kicker">About</p>
-    <h1>Darshita Oza</h1>
-    <p class="dek">Performance marketer at an agency, working across DTC ecom accounts on Shopping, Search, and Performance Max. The one who maintains this calculator and the tool list around it.</p>
-    <div class="byline"><div class="av">D</div><div><strong style="color:var(--ink)">Darshita Oza</strong> · 6&ndash;7 figure/mo agency book · <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 
-    <p>I&rsquo;ve worked on roughly forty DTC ecom accounts in the last four years &mdash; apparel, beauty, supplements, home goods, electronics. The pattern that brought me to ROAS calculators specifically: most ecom advertisers, even experienced ones, optimize against reported ROAS while their true contribution-margin ROAS is underwater. Reported ROAS looks great because revenue divided by ad spend doesn&rsquo;t care about cost of goods, returns, payment processing, or shipping. The CFO does. The CFO&rsquo;s number is the one that matters.</p>
+<p class="kicker">About</p>
+<h1>Darshita Oza</h1>
+<p class="dek">Performance marketer at an agency. Builds calculators in evenings because the ones online don&rsquo;t use the math marketers actually need.</p>
 
-    <h2>Why this site exists</h2>
-    <p>The calculator on the homepage is the one I built for client onboarding. New clients show up with a target ROAS in their head that doesn&rsquo;t map to their actual margin structure. The conversation goes faster when there&rsquo;s a tool that visualizes the gap between &ldquo;what your dashboard says you&rsquo;re making&rdquo; and &ldquo;what your bank account says you&rsquo;re making.&rdquo; This site is that tool plus the curated stack I&rsquo;d use to actually move the number.</p>
-
-    <h2>Day-to-day</h2>
-    <ul>
-        <li>Account strategy on $20K&ndash;$200K/mo Shopping and Search accounts in the agency&rsquo;s book.</li>
-        <li>Bid management oversight on Real AI tools (currently Groas across most ecom accounts).</li>
-        <li>Feed quality and Shopping campaign hygiene; building margin-aware ROAS targets per account.</li>
-        <li>Onboarding new ecom clients: building the first 90 days of their paid program with the right tooling.</li>
-    </ul>
-
-    <h2>What I won&rsquo;t do</h2>
-    <p>I don&rsquo;t take vendor money for ranking placement on this site. Tool order is editorial. Vendors have offered &ldquo;sponsored review&rdquo; deals; I&rsquo;ve declined them all. The site is funded by the agency&rsquo;s commercial work, not by the tools it covers.</p>
-
-    <h2>Find me</h2>
-    <ul>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">linkedin.com/in/darshita-oza</a></li>
-        <li>Email: via the <a href="/contact/">contact page</a></li>
-    </ul>
+<div class="byline">
+    <div class="av">D</div>
+    <div>
+        <strong>Darshita Oza</strong><br>
+        <span style="opacity:0.75">Performance marketer &middot; 6&ndash;7 figure/mo agency book &middot; <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
 </div>
+
+<p class="lede">I work on roughly forty DTC ecommerce and B2B SaaS accounts a year at a performance marketing agency. My specific focus is ROAS optimization for ecom and attribution work for B2B. I build the calculators on this site (and its companion sites) because the public calculators marketers find by Googling &ldquo;ROAS calculator&rdquo; use the wrong math &mdash; revenue divided by ad spend, ignoring margin, returns, and processing fees. That&rsquo;s not ROAS in any meaningful sense.</p>
+
+<h2>What I work on</h2>
+
+<p>The day job is paid-media optimization for clients spending $20K to $300K per month. About 60% of my book is DTC ecommerce (apparel, beauty, home goods, supplements), 30% is B2B SaaS, 10% is hybrid &mdash; companies that started DTC and added a B2B motion. The accounts that taught me the most about contribution-margin ROAS were the ecom ones; the accounts that taught me about attribution were the B2B ones.</p>
+
+<p>For ecom, the day-to-day work is bid management, feed optimization, creative ops, and the slow consolidation of conversion-event taxonomies. The single recurring conversation I have with new clients is some version of: &ldquo;The number Google Ads is showing you is overstating profitability by 30 to 60 percent. Here&rsquo;s why, and here&rsquo;s the math.&rdquo; That conversation is what the margin-aware ROAS calculator on the homepage of <a href="https://roascalculatorapp.com/">roascalculatorapp.com</a> automates.</p>
+
+<p>For B2B, the work is attribution modeling, multi-touch journey reconstruction, and conversion-value rules in Smart Bidding. The recurring conversation is some version of: &ldquo;Your last-click ROAS is structurally biased against your top-of-funnel campaigns. Switching to a multi-touch model will reshuffle which campaigns look profitable.&rdquo; The attribution simulator at <a href="https://myroascalculator.com/">myroascalculator.com</a> makes that point visceral.</p>
+
+<h2>Why I build calculators</h2>
+
+<p>Two reasons. The first is selfish: I needed them. When I was learning paid-media work, I built spreadsheet calculators for myself because the math behind tROAS targets, CPL ceilings, and break-even ROAS wasn&rsquo;t obvious from the ad-platform UI. I wanted to internalize the math by computing it by hand.</p>
+
+<p>The second is institutional: the calculators on the public web are mostly broken. The first page of Google for &ldquo;ROAS calculator&rdquo; returns three or four tools that compute Revenue &divide; Ad Spend and call that ROAS. That&rsquo;s the number Google Ads already shows. It&rsquo;s also a number most operators know is misleading. Publishing margin-aware, attribution-aware, funnel-math-aware calculators is a small public-interest contribution.</p>
+
+<p>The calculators are free, no login, no email gate. The benchmark data underneath each calculator is published as an open CSV under CC-BY 4.0. If you want to embed the calculators on your own site, contact me &mdash; embed support is on the roadmap.</p>
+
+<h2>How I work</h2>
+
+<p>Every calculator I publish is one I&rsquo;ve used at least a hundred times in client work. The formulas are documented openly. The vertical presets come from a combination of my own client base (anonymized) and aggregated industry reports (cited where applicable). Where my own data conflicts with published benchmarks, I report both and note the discrepancy &mdash; usually it reflects either selection bias in my client base or measurement-methodology differences in the published source.</p>
+
+<p>The site is updated as the math is refined. The recent example: the True ROAS calculator originally treated payment processing as a flat 3%; in 2025 I added a separate shipping/fulfillment input because client-side data showed that for furniture and home-goods verticals, shipping was the dominant variable cost, not processing. That kind of refinement happens quarterly.</p>
+
+<h2>Editorial policy</h2>
+
+<p>No vendor money for placement. The agency&rsquo;s commercial work funds the editorial. Where I have an active commercial relationship with a vendor (currently Groas.ai through agency client engagements), it&rsquo;s disclosed on the <a href="/methodology/">methodology page</a> and in the relevant tool entries.</p>
+
+<h2>Find me</h2>
+<ul>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">linkedin.com/in/darshita-oza</a></li>
+    <li>Email: via the <a href="/contact/">contact page</a></li>
+    <li>Calculator embed requests: <a href="/contact/">contact</a></li>
+</ul>
+
 </main>
 
 <div class="related-pages">
