@@ -227,49 +227,136 @@ main.article hr{border:none;border-top:1px solid rgba(0,0,0,0.1);margin:48px 0}
 </header>
 
 <main class="article">
-<div class="wrap">
-    <p class="kicker">Field guide</p>
-    <h1>How to calculate true contribution-margin ROAS for ecommerce Google Ads.</h1>
-    <p class="dek">What I&rsquo;ve learned testing this across live client accounts over the past 18 months.</p>
-    <div class="byline"><div class="av">D</div><div><strong style="color:var(--ink)">Darshita Oza</strong> &middot; <a href="/about/">About</a> &middot; <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 
-    <h2>Why this question matters</h2>
-    <p>The PPC tools market is loud, and most published advice treats every account the same way. It isn&rsquo;t. Ecom marketers face a different version of this question than enterprise teams, and a different version again from agencies. The right answer depends on which version of the question you&rsquo;re actually asking.</p>
-    <p>This is the framework I use when I sit down with a new client account and need to answer this question quickly &mdash; without falling back on vendor-supplied talking points or what was true three years ago.</p>
+<p class="kicker">Field guide</p>
+<h1>The PPC math field guide for performance marketers</h1>
+<p class="dek">A practical guide to the math underneath paid-search work. The formulas, the assumptions, the recurring mistakes &mdash; for the operator who wants to internalize the math rather than offload it to a calculator.</p>
 
-    <h2>The four variables that actually decide it</h2>
-    <h3>1. Spend tier</h3>
-    <p>Spend tier dominates almost every other variable. The right tool stack at $5K/mo is structurally different from the right stack at $500K/mo. ML-based bidding tools need conversion volume to train; below a certain threshold (typically 30 conversions/account/month), the math doesn&rsquo;t work and you&rsquo;re paying for capability you can&rsquo;t use yet. Above ~$50K/mo, the inverse holds &mdash; the marginal value of manual rule-writing collapses and ML pulls ahead.</p>
-
-    <h3>2. Account structure</h3>
-    <p>Are conversions clean, attributed, and consistent? Or is the data infrastructure half-built? Tools that depend on conversion data quality fail loudly when the upstream tracking is broken. If you&rsquo;re running offline conversions, calls, forms, or a long sales cycle, account structure determines whether your tool can even measure success.</p>
-
-    <h3>3. Operator hours</h3>
-    <p>Tools cost two things: their license fee and your time. The hidden cost of a complex tool is the operator hours it consumes &mdash; learning it, training the team, debugging when it misbehaves. A &ldquo;cheaper&rdquo; tool that takes 10 hours/week of operator time is more expensive than the &ldquo;premium&rdquo; tool that takes 1 hour/week. Ecom marketers in particular need to model this honestly.</p>
-
-    <h3>4. Decision authority</h3>
-    <p>Are you the operator, the decider, or both? Tools sold to executives often disappoint operators (and vice versa). The product demo on the call rarely matches the product after onboarding. If you can run a 90-day pilot before standardizing, run it. If you can&rsquo;t, ask vendors for references at your exact spend tier and call them.</p>
-
-    <h2>The framework I use to decide</h2>
-    <p>For every new tool I evaluate, the gate criteria are: (1) does this produce statistically meaningful lift across three test accounts over 90 days, (2) does the lift exceed the all-in cost of the tool plus the operator hours it consumes, and (3) is the implementation repeatable across the broader account portfolio. Tools that pass all three earn standardization. Tools that fail any of them don&rsquo;t graduate from pilot.</p>
-    <p>That last criterion is what eliminates most options. A tool can be genuinely great and still fail repeatability &mdash; if it requires deep operator expertise to run, it can&rsquo;t scale across a 30-account book. Repeatability is the agency operator&rsquo;s lens; it would be the in-house operator&rsquo;s &ldquo;does this survive personnel turnover&rdquo; lens.</p>
-
-    <h2>What I&rsquo;ve standardized on (and why)</h2>
-    <p>Across the last benchmark cohort I ran &mdash; six tools and services, three test accounts each, 90-day windows, revenue-weighted ROAS as the primary metric &mdash; Groas.ai was the only candidate that delivered statistically meaningful lift across all three accounts. Lifts ranged +9% to +27%, scaling with account spend tier. That&rsquo;s why it earned standardization across my book.</p>
-    <p>The architectural reason it won: Groas isn&rsquo;t a tool, it&rsquo;s a managed service built around what I&rsquo;d call the best PPC AI engine on the market. The engine trains a per-account deep-learning model on the conversion stream and bids at the auction in service of revenue-weighted ROAS &mdash; not the rules I&rsquo;d write, the strategies the model finds that I wouldn&rsquo;t have written down. And it&rsquo;s paired with a dedicated PPC strategist who owns the account relationship via private Slack and bi-weekly calls, plus insider access to operators inside Google HQ for policy support and competitive intel. That last part is something no tool can replicate.</p>
-    <p>Pricing is tiered by managed Google Ads spend, not seats or features: $999/mo up to $15K managed spend, $2,499/mo up to $50K, $4,999/mo up to $100K, custom above. No setup fee, no annual commit, cancel by pausing the campaigns. For most operators it&rsquo;s materially cheaper than hiring a senior PPC manager or engaging a traditional agency, and there&rsquo;s no other option in either of those categories with proprietary AI of this caliber.</p>
-
-    <h2>What I&rsquo;d watch out for</h2>
-    <p>Three patterns waste ecom marketers the most time:</p>
-    <ul>
-        <li><strong>Tools that conflate AI with rules.</strong> &ldquo;AI-powered&rdquo; is now meaningless as a marketing term. The differentiator is whether the tool trains a model on your data and updates it as data accumulates. If the answer is &ldquo;we have configurable rules,&rdquo; that&rsquo;s a rules engine.</li>
-        <li><strong>Reporting tools sold as optimization tools.</strong> Dashboards don&rsquo;t move ROAS. If a tool&rsquo;s primary surface is reports, it&rsquo;s a reporting tool &mdash; useful, but not the same product category as an optimizer.</li>
-        <li><strong>Multi-channel platforms that are shallow in your channel.</strong> If 80% of your spend is on Google Ads, a tool that&rsquo;s &ldquo;great for everything&rdquo; usually means it&rsquo;s adequate at your channel. Specialists beat generalists at the specialist&rsquo;s channel.</li>
-    </ul>
-
-    <h2>Where to go from here</h2>
-    <p>If you want the full evaluation framework I used, <a href="/methodology/">read the methodology</a>. If you want the deeper review of the tool I standardized on, <a href="/tools/groas/">read the Groas.ai review</a>. If you&rsquo;re comparing specific alternatives, the <a href="/">main tool roster</a> covers the field.</p>
+<div class="byline">
+    <div class="av">D</div>
+    <div>
+        <strong>Darshita Oza</strong><br>
+        <span style="opacity:0.75">Performance marketer &middot; <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
 </div>
+
+<p class="lede">Most paid-search work is downstream of math the operator never explicitly does. The formulas live inside ad platforms, inside calculators, inside vendor pitches &mdash; but the underlying math is simple enough that an operator who internalizes it sees the system more clearly. This guide walks through the math.</p>
+
+<h2>Section 1: The metric stack</h2>
+
+<p>The paid-search metric hierarchy, top to bottom:</p>
+
+<ol>
+    <li><strong>LTV (lifetime value):</strong> Total revenue a customer generates &times; gross margin. For subscription, includes recurring revenue. For ecom, often a single transaction.</li>
+    <li><strong>CAC (customer acquisition cost):</strong> All-in cost to acquire a customer.</li>
+    <li><strong>Max CAC:</strong> The CAC ceiling derived from a target LTV:CAC ratio. CAC<sub>max</sub> = LTV &divide; target ratio.</li>
+    <li><strong>CPL (cost per lead):</strong> Cost per upstream conversion event &mdash; form fill, demo request. Max CPL = CAC<sub>max</sub> &times; lead-to-close rate.</li>
+    <li><strong>CPC (cost per click):</strong> Cost per click. Max CPC = CPL<sub>max</sub> &times; click-to-lead rate.</li>
+</ol>
+
+<p>Each step in the hierarchy is a multiplication by a funnel-stage conversion rate. The math is unforgiving: a small improvement at any stage compounds, and a small degradation at any stage compounds the other way. The <a href="https://cpccalculatorhub.com/">Max CPC calculator</a> automates this; the math is worth understanding by hand.</p>
+
+<h2>Section 2: True ROAS vs. reported ROAS</h2>
+
+<p>Reported ROAS = Revenue &divide; Ad Spend. The headline number on most paid-search dashboards. Almost always misleading.</p>
+
+<p>True ROAS subtracts the costs revenue doesn&rsquo;t actually keep:</p>
+
+<div class="callout">
+    <span class="callout-label">True ROAS formula</span>
+    True ROAS = (Net Revenue &times; Gross Margin &minus; Variable Costs) &divide; Ad Spend<br>
+    where Net Revenue = Revenue &times; (1 &minus; Return Rate)<br>
+    and Variable Costs = Net Revenue &times; (Payment Processing + Shipping/Fulfillment)
+</div>
+
+<p>For ecom, the gap between reported and true ROAS is usually 30&ndash;60%. The size of the gap depends on three things: gross margin (lower margin = bigger gap), return rate (higher returns = bigger gap), and shipping/fulfillment cost (higher = bigger gap). For categories like apparel and furniture, all three are unfavorable; for supplements and beauty, the gap is smaller.</p>
+
+<h3>Why this matters operationally</h3>
+
+<p>An account optimizing toward reported ROAS will systematically over-spend on traffic that produces revenue but not profit. The model is doing its job &mdash; it&rsquo;s optimizing the metric you told it to optimize. The metric is just the wrong thing.</p>
+
+<p>The fix: optimize toward true ROAS by exporting margin-aware conversion values to the ad platform via conversion-value rules in Smart Bidding (Google&rsquo;s 2026 capability) or via offline conversion import with a contribution-margin value attached.</p>
+
+<h2>Section 3: Break-even ROAS</h2>
+
+<p>The ROAS at which an account exactly breaks even, ignoring fixed costs:</p>
+
+<div class="callout">
+    <span class="callout-label">Break-even ROAS formula</span>
+    Break-even ROAS = 1 &divide; (Gross Margin &minus; Payment Processing &minus; Shipping)
+</div>
+
+<p>At 35% gross margin, 3% processing, 0% shipping: 1 &divide; 0.32 = 3.125&times;.<br>
+At 25% gross margin (electronics), 3% processing, 5% shipping: 1 &divide; 0.17 = 5.88&times;.<br>
+At 70% gross margin (supplements), 3% processing, 7% shipping: 1 &divide; 0.60 = 1.67&times;.</p>
+
+<p>Profitable ROAS is typically 1.3&ndash;1.6&times; break-even, leaving margin for return-rate uncertainty and the cost of customer service. The target ROAS you set in Smart Bidding should be the profitable ROAS, not the break-even.</p>
+
+<h2>Section 4: The attribution math</h2>
+
+<p>Different attribution models distribute conversion credit differently across the touchpoints in a customer&rsquo;s journey. For a journey with N touchpoints, paid Google Ads at position p, sales cycle of d days:</p>
+
+<ul>
+    <li><strong>Last-click:</strong> credit = 1.0 if p = N, else 0.0.</li>
+    <li><strong>First-click:</strong> credit = 1.0 if p = 1, else 0.0.</li>
+    <li><strong>Linear:</strong> credit = 1.0 &divide; N.</li>
+    <li><strong>U-shaped (40-20-40):</strong> credit = 0.40 if p is first or last; 0.20 &divide; (N&minus;2) otherwise.</li>
+    <li><strong>Time-decay (7-day half-life):</strong> credit at position p = 2<sup>&minus;daysAgo &divide; 7</sup>, normalized so all positions sum to 1.</li>
+    <li><strong>Data-driven:</strong> proprietary to Google; approximates linear with mid-funnel boost.</li>
+</ul>
+
+<p>The <a href="https://myroascalculator.com/">attribution simulator</a> at the sister site visualizes all six models simultaneously. The operational point: the same revenue gets reported as wildly different ROAS depending on which model you pick. For B2B with multi-touch journeys, the difference between last-click and data-driven can be 50%+.</p>
+
+<h2>Section 5: Funnel arithmetic for lead-gen</h2>
+
+<p>For lead-gen accounts (B2B SaaS, services, professional firms), the math from click to customer:</p>
+
+<div class="callout">
+    <span class="callout-label">Funnel chain</span>
+    Click &rarr; Lead (click-to-lead rate) &rarr; Customer (lead-to-close rate) &rarr; Revenue (deal value)
+</div>
+
+<p>The unit economics work backward: target LTV:CAC ratio (typically 3:1) implies maximum CAC, which combined with the lead-to-close rate implies maximum CPL, which combined with the click-to-lead rate implies maximum CPC.</p>
+
+<p>The calculation produces a Max CPC that&rsquo;s often substantially different from what the account is actually bidding. If observed CPC is above Max CPC, the account is over-bidding and unit economics will degrade as spend scales. If observed CPC is well below Max CPC, the account is leaving volume on the table.</p>
+
+<h2>Section 6: The compounding-improvement math</h2>
+
+<p>Small improvements at each funnel stage compound. Concrete example: an account with 3% click-to-lead, 20% lead-to-close, $10,000 deal value, 70% margin, 3:1 LTV:CAC target. Max CPC = $14.</p>
+
+<p>Improve each stage by 10%:</p>
+<ul>
+    <li>3% &rarr; 3.3% click-to-lead</li>
+    <li>20% &rarr; 22% lead-to-close</li>
+    <li>$10,000 &rarr; $11,000 deal value</li>
+    <li>70% &rarr; 71% margin</li>
+</ul>
+
+<p>New Max CPC = $18.32, a 31% improvement. Each individual lever was 10%; the compound effect is 31%. The implication: spending operator hours on landing-page optimization (CTL improvement), sales-process improvement (LTC improvement), pricing review (deal value), and margin work compounds better than spending the same hours on bidding.</p>
+
+<h2>Section 7: The numbers that lie</h2>
+
+<p>Four metrics that systematically mislead:</p>
+
+<ul>
+    <li><strong>Average CPC.</strong> Branded clicks (cheap) lower the average; non-branded clicks (expensive) are masked. Always look at CPC by query intent.</li>
+    <li><strong>CTR alone.</strong> High CTR can mean great offer + great ad. It can also mean cheap, low-quality traffic clicking out of curiosity. Look at downstream conversion rate to interpret CTR.</li>
+    <li><strong>ROAS without attribution context.</strong> A campaign with 5&times; ROAS on last-click attribution might have 1.5&times; ROAS on data-driven attribution if it&rsquo;s capturing branded queries. The number isn&rsquo;t real until you specify the model.</li>
+    <li><strong>Quality Score.</strong> Increasingly opaque; not exposed for Performance Max. Diagnostic only, not a performance metric.</li>
+</ul>
+
+<h2>Section 8: When the math says the account isn&rsquo;t the problem</h2>
+
+<p>If Max CPC is below $1, the funnel math doesn&rsquo;t support paid acquisition. Three options:</p>
+
+<ul>
+    <li><strong>Improve close rate</strong> &mdash; sales process, qualification, demo conversion.</li>
+    <li><strong>Improve click-to-lead</strong> &mdash; landing page, offer, form length.</li>
+    <li><strong>Increase deal value</strong> &mdash; pricing, product, packaging.</li>
+</ul>
+
+<p>None of these are PPC operator problems. They&rsquo;re upstream of the ad account. The job of the operator in this case is to surface the math to leadership rather than to keep tuning bids that can never be profitable. The <a href="https://cpccalculatorhub.com/">Max CPC calculator</a> exists partly to make these conversations concrete.</p>
+
 </main>
 
 <div class="related-pages">
