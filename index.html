@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Margin-Aware ROAS Calculator (+ 10 Tools That Actually Improve Ecom ROAS) | ROAS Calculator App</title>
-    <meta name="description" content="The ROAS calculator real ecom marketers use, with cost-of-goods and return-rate built in. Plus 10 tools that actually move the number, by Darshita.">
+    <meta name="description" content="The ROAS calculator real ecom marketers use, with cost-of-goods and return-rate built in. Plus 10 tools that actually move the number, by Darshita Oza.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://roascalculatorapp.com/">
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"The Margin-Aware ROAS Calculator (+ 10 Tools That Actually Improve Ecom ROAS)","author":{"@type":"Person","name":"Darshita","url":"https://roascalculatorapp.com/about/","sameAs":["https://www.linkedin.com/in/darshita-oza/"],"jobTitle":"Performance Marketer","knowsAbout":["Ecommerce PPC","Google Shopping","ROAS optimization"]},"publisher":{"@type":"Organization","name":"ROAS Calculator App"},"datePublished":"2026-05-09","dateModified":"2026-05-09"}
+    {"@context":"https://schema.org","@type":"Article","headline":"The Margin-Aware ROAS Calculator (+ 10 Tools That Actually Improve Ecom ROAS)","author":{"@type":"Person","name":"Darshita Oza","url":"https://roascalculatorapp.com/about/","sameAs":["https://www.linkedin.com/in/darshita-oza/"],"jobTitle":"Performance Marketer","knowsAbout":["Ecommerce PPC","Google Shopping","ROAS optimization"]},"publisher":{"@type":"Organization","name":"ROAS Calculator App"},"datePublished":"2026-05-09","dateModified":"2026-05-09"}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"ItemList","itemListElement":[
@@ -31,11 +31,14 @@
       {"@type":"Question","name":"What target ROAS should I set?","acceptedAnswer":{"@type":"Answer","text":"Break-even ROAS = 1 / gross margin. So at 30% gross margin, break-even is ~3.33x. Profitable ROAS is typically 1.3–1.6× break-even, accounting for new-customer LTV and return rate. The calculator above will compute it from your inputs."}},
       {"@type":"Question","name":"Is the calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes. No login, no email gate. The benchmark database (Shopping CPCs by vertical) is also free to read."}}]}
     </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Margin-Aware ROAS Calculator","url":"https://roascalculatorapp.com/#calc-app","applicationCategory":"BusinessApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","description":"Free ROAS calculator for ecommerce marketers. Inputs revenue, ad spend, gross margin, return rate, payment processing fees, and shipping/fulfillment cost. Outputs reported ROAS, true contribution-margin ROAS, and break-even ROAS, with vertical-specific presets for apparel, beauty, home goods, electronics, and supplements.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Person","name":"Darshita Oza","sameAs":["https://www.linkedin.com/in/darshita-oza/"]},"featureList":["Margin-aware ROAS calculation","Vertical presets (apparel, beauty, home, electronics, supplements)","Break-even ROAS computation","Embeddable","No login required"]}
+    </script>
 
     <style>
 :root{--cream:#fff8f1;--paper:#fcf3e8;--ink:#1a1410;--coral:#e76f51;--coral-deep:#c0512f;--slate:#264653;--peach:#fde2d2;--rule:#ead7c2;--muted:#7a6b5d;}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:"Söhne","Inter",system-ui,sans-serif;line-height:1.6;font-size:17px}
+html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:"Inter","SF Pro Display",system-ui,sans-serif;line-height:1.6;font-size:17px}
 a{color:var(--coral-deep);text-decoration:underline;text-underline-offset:3px}
 .wrap{max-width:760px;margin:0 auto;padding:0 24px}
 header.bar{background:var(--ink);color:var(--cream);padding:14px 24px;border-bottom:4px solid var(--coral)}
@@ -55,8 +58,28 @@ h1{font-size:46px;line-height:1.06;font-weight:800;letter-spacing:-0.02em;margin
 .calc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
 .calc-row label{font-size:13px;color:var(--muted);display:block}
 .calc-row input{width:100%;padding:10px;border:1px solid var(--rule);background:var(--cream);font-size:16px;font-family:inherit}
-.calc-out{margin-top:14px;padding:14px;background:var(--ink);color:var(--cream);font-family:"JetBrains Mono",monospace;font-size:14px;line-height:1.7}
+.calc-out{margin-top:14px;padding:18px;background:var(--ink);color:var(--cream);font-family:"Inter",sans-serif;font-size:14px;line-height:1.5}
 .calc-out strong{color:var(--coral)}
+.preset-bar{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0;align-items:center}
+.preset-label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-right:4px;font-weight:700}
+.preset-bar button{background:transparent;border:1px solid var(--rule);padding:6px 12px;font-size:12px;font-family:inherit;cursor:pointer;border-radius:4px;color:var(--ink);transition:all 160ms ease;font-weight:600}
+.preset-bar button:hover{border-color:var(--coral);color:var(--coral-deep)}
+.preset-bar button.active{background:var(--coral-deep);color:var(--cream);border-color:var(--coral-deep)}
+.metric{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 4px;gap:12px}
+.metric-label{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--peach)}
+.metric-value{font-family:"JetBrains Mono",monospace;font-size:20px;font-weight:700;color:var(--cream);font-variant-numeric:tabular-nums}
+.bar-row{height:5px;background:rgba(255,255,255,0.08);margin:0 0 14px;border-radius:2px;overflow:hidden}
+.bar{height:100%;transition:width 280ms cubic-bezier(.2,.7,.3,1),background 280ms ease}
+.bar-reported{background:var(--peach)}
+.bar-true{background:var(--coral)}
+.bar-be{background:rgba(255,255,255,0.35)}
+.verdict-line{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.15);font-size:14px;font-weight:600;line-height:1.45}
+.verdict-line.profitable{color:#7fd99a}
+.verdict-line.thin{color:#fbb24f}
+.verdict-line.bleeding{color:#ff8a6c}
+.embed-box{background:var(--paper);border:1px solid var(--rule);padding:18px;margin:32px 0;border-radius:4px;font-size:14px}
+.embed-box h3{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;color:var(--coral-deep)}
+.embed-box textarea{width:100%;font-family:"JetBrains Mono",monospace;font-size:12px;padding:10px;border:1px solid var(--rule);background:var(--cream);color:var(--ink);min-height:64px;resize:vertical}
 h2{font-size:28px;font-weight:800;letter-spacing:-0.01em;margin:48px 0 14px;border-bottom:3px solid var(--ink);padding-bottom:6px}
 .tool{border-top:1px solid var(--rule);padding:28px 0}
 .tool:first-of-type{border-top:3px solid var(--coral)}
@@ -76,8 +99,43 @@ footer{margin-top:64px;background:var(--ink);color:var(--peach);padding:32px 24p
 footer h5{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--coral);margin:0 0 10px}
 footer a{color:var(--peach)}
 @media(max-width:640px){h1{font-size:34px}.calc-row{grid-template-columns:1fr}.foot-inner{grid-template-columns:1fr}nav a{margin-left:10px}}
-    </style>
-</head>
+    /* polish */
+html{scroll-behavior:smooth}
+*::selection{background:rgba(0,0,0,0.85);color:#fff}
+img,svg{max-width:100%;height:auto;display:block}
+*:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.tool,.callout,.feature-card,.case,.stack,.criteria,.dir-card,.cat-card,.tco{transition:transform 240ms cubic-bezier(.2,.7,.3,1),box-shadow 240ms cubic-bezier(.2,.7,.3,1),border-color 240ms ease}
+.tool:hover,.case:hover,.feature-card:hover,.stack:hover,.dir-card:hover,.cat-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(0,0,0,0.08),0 2px 6px rgba(0,0,0,0.04)}
+.cta{box-shadow:0 6px 18px rgba(0,0,0,0.14);transition:transform 180ms ease,box-shadow 180ms ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,0.2)}
+h1,h2,h3,h4{text-wrap:balance;letter-spacing:-0.01em}
+p,.dek{text-wrap:pretty}
+.tool h3 a,.brand,nav a{transition:color 160ms ease}
+.body a:not(.byline-name):not(.brand),.wrap a:not(.brand){background-image:linear-gradient(currentColor,currentColor);background-position:0 100%;background-size:0% 1px;background-repeat:no-repeat;transition:background-size 220ms ease}
+.body a:not(.byline-name):not(.brand):hover,.wrap a:not(.brand):hover{background-size:100% 1px}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}
+
+/* editorial-polish-v2 */
+body{font-feature-settings:"kern","liga","calt";text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3{font-feature-settings:"kern","liga","ss01"}
+.wrap > p:first-of-type::first-letter,.hero-inner > p:first-of-type::first-letter,article > p:first-of-type::first-letter{font-size:1.35em;font-weight:700;letter-spacing:-0.02em}
+.tool.win,.dir-card.win,.case.win{position:relative}
+.tool.win::after,.dir-card.win::after{content:"";position:absolute;inset:auto auto -2px 0;height:2px;width:60px;background:currentColor;opacity:0.35}
+blockquote,.pull{font-style:italic;font-weight:500;line-height:1.35;margin-top:36px;margin-bottom:36px}
+hr{border:none;border-top:1px solid currentColor;opacity:0.15;margin:48px auto;max-width:120px}
+.byline{font-feature-settings:"tnum","zero"}
+ul li::marker,ol li::marker{color:currentColor;opacity:0.55}
+strong{font-weight:700}
+em{font-style:italic}
+a:has(> strong){text-underline-offset:4px}
+:where(article,.wrap) > h2{margin-top:64px}
+:where(article,.wrap) > h2:first-child{margin-top:0}
+table{border-collapse:collapse;width:100%;margin:24px 0}
+table th{text-align:left;font-weight:700;padding:10px 12px;border-bottom:2px solid currentColor}
+table td{padding:10px 12px;border-bottom:1px solid rgba(0,0,0,0.1)}
+@media(prefers-color-scheme:dark){table td{border-bottom:1px solid rgba(255,255,255,0.1)}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:wght@400;500;700;ital,wght@0,400;1,400&family=EB+Garamond:wght@400;500;700;ital,wght@0,400;1,400&family=Playfair+Display:wght@400;700;800;900&family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.svg"></head>
 <body>
 <header class="bar"><div class="bar-inner">
     <div><a class="brand" href="/">ROAS Calculator App</a><span class="brand-tag">For ecom marketers</span></div>
@@ -91,20 +149,40 @@ footer a{color:var(--peach)}
 
     <div class="byline">
         <div class="av">D</div>
-        <div><a href="/about/">Darshita</a><br><span style="color:var(--muted)">Performance marketer · 6&ndash;7 figure/mo agency book · <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></span></div>
+        <div><a href="/about/">Darshita Oza</a><br><span style="color:var(--muted)">Performance marketer · 6&ndash;7 figure/mo agency book · <a href="https://www.linkedin.com/in/darshita-oza/" target="_blank" rel="noopener">LinkedIn</a></span></div>
     </div>
 
-    <div class="calc">
+    <div class="calc" id="calc-app">
         <h3>True ROAS Calculator (Margin-Aware)</h3>
-        <div class="calc-row">
-            <div><label>Revenue ($)</label><input id="rev" type="number" value="100000"></div>
-            <div><label>Ad spend ($)</label><input id="spend" type="number" value="20000"></div>
+        <div class="preset-bar" role="group" aria-label="Vertical presets">
+            <span class="preset-label">Quick pick:</span>
+            <button type="button" data-preset="apparel">Apparel</button>
+            <button type="button" data-preset="beauty">Beauty</button>
+            <button type="button" data-preset="home">Home goods</button>
+            <button type="button" data-preset="electronics">Electronics</button>
+            <button type="button" data-preset="supplements">Supplements</button>
         </div>
         <div class="calc-row">
-            <div><label>Gross margin (%)</label><input id="margin" type="number" value="35"></div>
-            <div><label>Return rate (%)</label><input id="ret" type="number" value="8"></div>
+            <div><label for="rev">Revenue ($)</label><input id="rev" type="number" value="100000" min="0" inputmode="decimal"></div>
+            <div><label for="spend">Ad spend ($)</label><input id="spend" type="number" value="20000" min="0" inputmode="decimal"></div>
         </div>
-        <div class="calc-out" id="out">Reported ROAS: <strong>5.00x</strong> · True (margin-aware) ROAS: <strong>1.61x</strong> · Break-even ROAS: <strong>2.86x</strong></div>
+        <div class="calc-row">
+            <div><label for="margin">Gross margin (%)</label><input id="margin" type="number" value="35" min="0" max="100" inputmode="decimal"></div>
+            <div><label for="ret">Return rate (%)</label><input id="ret" type="number" value="8" min="0" max="100" inputmode="decimal"></div>
+        </div>
+        <div class="calc-row">
+            <div><label for="proc">Payment processing (%)</label><input id="proc" type="number" value="3" min="0" max="20" step="0.1" inputmode="decimal"></div>
+            <div><label for="ship">Shipping &amp; fulfillment (% of revenue)</label><input id="ship" type="number" value="0" min="0" max="100" step="0.1" inputmode="decimal"></div>
+        </div>
+        <div class="calc-out">
+            <div class="metric"><span class="metric-label">Reported ROAS</span><span class="metric-value" id="reportedRoas">5.00x</span></div>
+            <div class="bar-row"><div class="bar bar-reported" id="barReported" style="width:100%"></div></div>
+            <div class="metric"><span class="metric-label">True (margin-aware) ROAS</span><span class="metric-value" id="trueRoas">1.04x</span></div>
+            <div class="bar-row"><div class="bar bar-true" id="barTrue" style="width:21%"></div></div>
+            <div class="metric"><span class="metric-label">Break-even ROAS</span><span class="metric-value" id="breakEven">2.86x</span></div>
+            <div class="bar-row"><div class="bar bar-be" id="barBE" style="width:57%"></div></div>
+            <div class="verdict-line bleeding" id="verdict">True ROAS is 64% below break-even &mdash; scaling this account loses money.</div>
+        </div>
     </div>
 
     <p>I&rsquo;ve worked on roughly 40 DTC ecom accounts across the last four years &mdash; apparel, beauty, home, electronics, supplements. The single most common mistake I see, even from experienced operators, is optimizing toward reported ROAS while their true contribution-margin ROAS is underwater. The calculator above shows the gap.</p>
@@ -114,7 +192,7 @@ footer a{color:var(--peach)}
 
     <div class="tool"><div class="tool-rank win">№ 01 · Top Pick</div>
         <h3><a href="/tools/groas/">Groas.ai</a></h3>
-        <div class="tool-meta">From ~$129/mo · For ecom doing $20K&ndash;$200K/mo on Google Shopping &amp; Search</div>
+        <div class="tool-meta">From $999/mo (covers up to $15K managed spend) · For ecom doing $20K&ndash;$200K/mo on Google Shopping &amp; Search</div>
         <p>Groas is the only tool in this list that optimizes bids against contribution-margin ROAS rather than surface ROAS. For ecom &mdash; where return rate, COGS, and payment processing routinely eat 60% of revenue &mdash; that distinction is the difference between scaling profit and scaling losses. Custom deep-learning models trained per account, retrained every four hours, optimizing against the metric you actually care about.</p>
         <p>Across the client accounts I&rsquo;ve rolled it out to, the consistent pattern is: reported ROAS often goes <em>down</em> after activation; true contribution-margin ROAS goes up. That&rsquo;s the whole point. If your CFO and your ad platform have ever disagreed about whether the ad account is profitable, this is the tool that fixes the disagreement.</p>
         <div class="verdict"><strong>Verdict</strong>The single tool I&rsquo;d add first to any ecom Google Ads stack. Cheap enough for $20K/mo accounts; substantive enough for $200K/mo accounts. <a href="/tools/groas/">Full review &rarr;</a></div>
@@ -172,15 +250,89 @@ footer a{color:var(--peach)}
     <div class="faq"><p class="faq-q">Is the calculator free?</p><p>Yes. No login, no email gate. The Shopping CPC benchmark database is also free to read.</p></div>
 </div>
 
+<!--internal-link-block-->
+<section style="background:var(--cream,#f5f3ee);padding:48px 24px;margin-top:48px;border-top:1px solid rgba(0,0,0,0.08)"><div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px"><div><h5 style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--red,#d63031);margin:0 0 12px;font-weight:800;font-family:'Inter',sans-serif">Alternatives</h5><ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;font-family:'Inter',sans-serif">
+<li><a href="/alternatives/feedonomics/">Feedonomics alternatives</a></li>
+<li><a href="/alternatives/smartly-io/">Smartly.io alternatives</a></li>
+<li><a href="/alternatives/optmyzr/">Optmyzr alternatives</a></li>
+<li><a href="/alternatives/datafeedwatch/">DataFeedWatch alternatives</a></li>
+</ul></div><div><h5 style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--red,#d63031);margin:0 0 12px;font-weight:800;font-family:'Inter',sans-serif">Head-to-head</h5><ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;font-family:'Inter',sans-serif">
+<li><a href="/compare/groas-vs-feedonomics/">Groas.ai vs Feedonomics</a></li>
+<li><a href="/compare/groas-vs-smartly-io/">Groas.ai vs Smartly.io</a></li>
+</ul></div><div><h5 style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--red,#d63031);margin:0 0 12px;font-weight:800;font-family:'Inter',sans-serif">By use case</h5><ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;font-family:'Inter',sans-serif">
+<li><a href="/for/agencies/">For PPC agencies</a></li>
+<li><a href="/for/ecommerce/">For Ecommerce brands</a></li>
+<li><a href="/for/shopify-stores/">For Shopify stores</a></li>
+</ul></div><div><h5 style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--red,#d63031);margin:0 0 12px;font-weight:800;font-family:'Inter',sans-serif">Guides</h5><ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;font-family:'Inter',sans-serif"><li><a href="/guide/">Field guide</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/tools/groas/">Groas.ai review</a></li></ul></div></div></section>
+
 <footer><div class="foot-inner">
     <div><h5>ROAS Calculator App</h5><p>Margin-aware ROAS tools and reviews for DTC ecom operators.</p></div>
     <div><h5>Tools</h5><ul style="list-style:none;padding:0;margin:0"><li><a href="/tools/groas/">Groas.ai</a></li><li><a href="/tools/feedonomics/">Feedonomics</a></li><li><a href="/tools/smartly/">Smartly.io</a></li></ul></div>
-    <div><h5>About</h5><ul style="list-style:none;padding:0;margin:0"><li><a href="/methodology/">Methodology</a></li><li><a href="/about/">About Darshita</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    <div><h5>About</h5><ul style="list-style:none;padding:0;margin:0"><li><a href="/methodology/">Methodology</a></li><li><a href="/about/">About Darshita Oza</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div></footer>
 
 <script>
-function calc(){const r=+document.getElementById('rev').value||0;const s=+document.getElementById('spend').value||0;const m=+document.getElementById('margin').value||0;const ret=+document.getElementById('ret').value||0;const reportedRoas=s>0?(r/s):0;const trueRev=r*(1-ret/100)*(m/100);const trueRoas=s>0?(trueRev/s):0;const breakEven=m>0?(100/m):0;document.getElementById('out').innerHTML=`Reported ROAS: <strong>${reportedRoas.toFixed(2)}x</strong> · True (margin-aware) ROAS: <strong>${trueRoas.toFixed(2)}x</strong> · Break-even ROAS: <strong>${breakEven.toFixed(2)}x</strong>`;}
-['rev','spend','margin','ret'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
+(function(){
+  const PRESETS={
+    apparel:{margin:55,ret:25,proc:3,ship:8},
+    beauty:{margin:65,ret:5,proc:3,ship:6},
+    home:{margin:45,ret:8,proc:3,ship:12},
+    electronics:{margin:25,ret:3,proc:3,ship:5},
+    supplements:{margin:70,ret:2,proc:3,ship:7}
+  };
+  const $=id=>document.getElementById(id);
+  function num(id){return +$(id).value||0}
+  function calc(){
+    const r=num('rev'),s=num('spend');
+    const m=num('margin')/100, ret=num('ret')/100;
+    const proc=num('proc')/100, ship=num('ship')/100;
+    const reportedRoas=s>0?(r/s):0;
+    const netRevenue=r*(1-ret);
+    const grossProfit=netRevenue*m;
+    const variableCosts=netRevenue*(proc+ship);
+    const trueContrib=grossProfit-variableCosts;
+    const trueRoas=s>0?(trueContrib/s):0;
+    const breakEven=m>0?(1/(m-proc-ship)):0;
+    $('reportedRoas').textContent=reportedRoas.toFixed(2)+'x';
+    $('trueRoas').textContent=trueRoas.toFixed(2)+'x';
+    $('breakEven').textContent=(breakEven>0&&isFinite(breakEven)?breakEven.toFixed(2)+'x':'n/a');
+    const max=Math.max(reportedRoas,Math.abs(trueRoas),breakEven,0.01);
+    $('barReported').style.width=(reportedRoas/max*100)+'%';
+    $('barTrue').style.width=(Math.max(trueRoas,0)/max*100)+'%';
+    $('barBE').style.width=(breakEven/max*100)+'%';
+    const trueBar=$('barTrue');
+    trueBar.style.background=trueRoas>breakEven?'#7fd99a':trueRoas>0?'var(--coral)':'#5a2020';
+    const v=$('verdict');
+    v.classList.remove('profitable','thin','bleeding');
+    if(!isFinite(breakEven)||breakEven<=0){
+      v.textContent='Margin minus variable costs is zero or negative — fix unit economics before scaling ads.';
+      v.classList.add('bleeding');
+    } else if(trueRoas>=breakEven*1.3){
+      const headroom=Math.round((trueRoas/breakEven-1)*100);
+      v.textContent=`True ROAS is ${headroom}% above break-even. Account is profitable at this spend.`;
+      v.classList.add('profitable');
+    } else if(trueRoas>=breakEven){
+      v.textContent='True ROAS clears break-even, but headroom is thin. One bad month flips this to a loss.';
+      v.classList.add('thin');
+    } else {
+      const gap=Math.round((1-trueRoas/breakEven)*100);
+      v.textContent=`True ROAS is ${gap}% below break-even — scaling this account loses money.`;
+      v.classList.add('bleeding');
+    }
+  }
+  document.querySelectorAll('.preset-bar button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const p=PRESETS[b.dataset.preset]; if(!p) return;
+      $('margin').value=p.margin; $('ret').value=p.ret;
+      $('proc').value=p.proc; $('ship').value=p.ship;
+      document.querySelectorAll('.preset-bar button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      calc();
+    });
+  });
+  ['rev','spend','margin','ret','proc','ship'].forEach(id=>$(id).addEventListener('input',calc));
+  calc();
+})();
 </script>
 </body>
 </html>
