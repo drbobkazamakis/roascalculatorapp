@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce ROAS benchmark data &mdash; True ROAS Calculator</title>
+    <meta name="description" content="Open-license dataset of ecommerce gross margin, return rate, processing fee, and shipping cost benchmarks by vertical. CC-BY 4.0.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://roascalculatorapp.com/data/">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Dataset","name":"Ecommerce ROAS Benchmarks by Vertical","description":"Approximate gross margin, return rate, payment processing fee, and shipping/fulfillment cost benchmarks across 20 ecommerce verticals. Derived break-even ROAS for each. Sourced from public DTC reports, Shopify state-of-commerce data, McKinsey benchmarks, and operator client data across ~40 DTC accounts.","url":"https://roascalculatorapp.com/data/","keywords":"ROAS,ecommerce,DTC,gross margin,return rate,benchmarks","creator":{"@type":"Person","name":"Darshita Oza","sameAs":["https://www.linkedin.com/in/darshita-oza/"]},"datePublished":"2026-05-13","license":"https://creativecommons.org/licenses/by/4.0/","distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://roascalculatorapp.com/data/ecommerce-roas-benchmarks.csv"}],"variableMeasured":["gross_margin_pct","return_rate_pct","payment_processing_pct","shipping_pct_of_revenue","break_even_roas"]}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+:root{--bg:#fafaf7;--surface:#fff;--ink:#1a1410;--ink-soft:#3d352a;--muted:#7a6b5d;--rule:#e8e2d4;--rule-soft:#f0ebde;--coral:#e76f51;--coral-deep:#c0512f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+*:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:2px}
+.util-header{position:sticky;top:0;z-index:10;background:rgba(250,250,247,0.92);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--rule);padding:14px 24px}
+.util-header-inner{max-width:880px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand-mark{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none;font-size:15px}
+.brand-mark .dot{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.util-nav{display:flex;gap:18px;font-size:13px}
+.util-nav a{color:var(--ink-soft);text-decoration:none;font-weight:500}
+.util-nav a:hover{color:var(--coral-deep)}
+.util-nav a.current{color:var(--coral-deep);font-weight:700}
+main{max-width:880px;margin:0 auto;padding:32px 24px 96px}
+.crumbs{font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace;margin:0 0 14px}
+.crumbs a{color:var(--ink-soft);text-decoration:none}
+h1{font-size:32px;line-height:1.1;font-weight:700;letter-spacing:-0.02em;margin:0 0 10px}
+.sub{font-size:16px;color:var(--ink-soft);margin:0 0 24px;max-width:62ch}
+.dataset-card{background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:22px;margin:0 0 28px}
+.dataset-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:0 0 18px;font-family:"JetBrains Mono",monospace;font-size:12px}
+.dataset-meta div{padding:8px 12px;background:var(--rule-soft);border-radius:4px}
+.dataset-meta b{display:block;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);font-size:10px;margin-bottom:4px;font-weight:700}
+.dataset-meta span{color:var(--ink);font-weight:600}
+.download{background:var(--ink);color:#fff;padding:11px 18px;text-decoration:none;border-radius:4px;font-size:13px;font-weight:600;font-family:"JetBrains Mono",monospace;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:8px;transition:background 160ms ease}
+.download:hover{background:var(--coral-deep)}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:0.12em;color:var(--coral-deep);margin:32px 0 12px;font-weight:700}
+.schema-table{width:100%;border-collapse:collapse;font-size:13px;font-family:"JetBrains Mono",monospace;background:var(--surface);border:1px solid var(--rule);border-radius:5px;overflow:hidden}
+.schema-table th{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-family:"Inter",sans-serif;background:var(--rule-soft)}
+.schema-table td{padding:10px 14px;border-bottom:1px solid var(--rule-soft);color:var(--ink-soft)}
+.schema-table tr:last-child td{border-bottom:none}
+.schema-table code{color:var(--coral-deep);font-weight:600}
+.notes{font-size:14px;color:var(--ink-soft);line-height:1.6;max-width:64ch}
+.notes a{color:var(--coral-deep);font-weight:600}
+.license{font-size:13px;color:var(--muted);margin:24px 0 0;padding:14px;background:var(--rule-soft);border-radius:4px}
+.license b{color:var(--ink-soft)}
+footer{padding:24px;border-top:1px solid var(--rule);margin-top:64px}
+.foot-inner{max-width:880px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
+.foot-inner a{color:var(--ink-soft);text-decoration:none;margin-left:14px}
+.foot-inner a:first-child{margin-left:0}
+    </style>
+</head>
+<body>
+
+<header class="util-header">
+    <div class="util-header-inner">
+        <a class="brand-mark" href="/"><span class="dot"></span>ROAS Calculator</a>
+        <nav class="util-nav">
+            <a href="/methodology/">Methodology</a>
+            <a href="/data/" class="current">Data</a>
+            <a href="/tools/">Tool reviews</a>
+            <a href="/about/">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <p class="crumbs"><a href="/">Home</a> &rsaquo; Data</p>
+    <h1>Ecommerce ROAS benchmarks</h1>
+    <p class="sub">Open-license dataset of gross margin, return rate, processing fee, and shipping cost benchmarks across 20 ecommerce verticals &mdash; with derived break-even ROAS for each.</p>
+
+    <div class="dataset-card">
+        <div class="dataset-meta">
+            <div><b>Rows</b><span>20</span></div>
+            <div><b>Columns</b><span>8</span></div>
+            <div><b>Format</b><span>CSV (UTF-8)</span></div>
+            <div><b>Updated</b><span>2026-05-13</span></div>
+            <div><b>License</b><span>CC-BY 4.0</span></div>
+            <div><b>Size</b><span>&lt;4 KB</span></div>
+        </div>
+        <a class="download" href="/data/ecommerce-roas-benchmarks.csv" download>&darr; ecommerce-roas-benchmarks.csv</a>
+    </div>
+
+    <h2>Schema</h2>
+    <table class="schema-table">
+        <thead>
+            <tr><th>Column</th><th>Type</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><code>vertical</code></td><td>string</td><td>Ecommerce vertical or sub-vertical (e.g. apparel, beauty_premium, furniture_flat_pack)</td></tr>
+            <tr><td><code>avg_gross_margin_pct</code></td><td>integer 0&ndash;100</td><td>Approximate gross margin as a percentage of revenue</td></tr>
+            <tr><td><code>avg_return_rate_pct</code></td><td>integer 0&ndash;100</td><td>Approximate return rate (returned orders / total orders)</td></tr>
+            <tr><td><code>avg_payment_processing_pct</code></td><td>decimal</td><td>Typical payment processing fee as a % of gross revenue</td></tr>
+            <tr><td><code>avg_shipping_pct_of_revenue</code></td><td>integer</td><td>Shipping &amp; fulfillment as a % of revenue (includes pick/pack)</td></tr>
+            <tr><td><code>break_even_roas</code></td><td>decimal</td><td>Computed: 1 &divide; (margin &minus; processing &minus; shipping)</td></tr>
+            <tr><td><code>profitable_roas_1_5x</code></td><td>decimal</td><td>Computed: break_even_roas &times; 1.5 (target ROAS with 50% headroom)</td></tr>
+            <tr><td><code>notes</code></td><td>string</td><td>Qualitative context per vertical</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Methodology &amp; sources</h2>
+    <p class="notes">
+        Values are <em>approximate medians</em>, not exhaustive surveys. Constructed from a blend of: public DTC brand financials (10-K filings where available); Shopify state-of-commerce reports (2024&ndash;2025); McKinsey and Bain DTC benchmark publications; vendor-published category reports (Klaviyo, Recharge, Yotpo); operator data across ~40 DTC client accounts the maintainer has worked with. Where sources conflict, the median is taken; outliers are excluded. The dataset is published explicitly as <em>directional</em>: use it as a sanity-check for your own inputs, not as a substitute for them.
+    </p>
+    <p class="notes">
+        Methodology details, source URLs, and the reasoning per vertical are documented at <a href="/methodology/">methodology</a>. To suggest a correction or a new vertical, see <a href="/contact/">contact</a>.
+    </p>
+
+    <h2>Use</h2>
+    <p class="notes">
+        Cite the dataset as: <em>Oza, D. (2026). Ecommerce ROAS Benchmarks by Vertical. roascalculatorapp.com. CC-BY 4.0.</em>
+    </p>
+
+    <div class="license">
+        <b>License: Creative Commons Attribution 4.0.</b> You may share and adapt the dataset for any purpose, including commercial, provided you give appropriate credit. Link back to <a href="https://roascalculatorapp.com/" style="color:var(--coral-deep)">roascalculatorapp.com</a> in citations.
+    </div>
+</main>
+
+<footer>
+    <div class="foot-inner">
+        <span>roascalculatorapp.com &middot; CC-BY 4.0</span>
+        <span>
+            <a href="/methodology/">Methodology</a>
+            <a href="/tools/">Tool reviews</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        </span>
+    </div>
+</footer>
+
+</body>
+</html>
